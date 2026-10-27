@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Happy Diwali 🪔 | Festival of Lights</title>
   
-  <!-- Festive Google Fonts: Cinzel, Great Vibes, Poppins & Mukta Malar (Tamil) -->
+  <!-- Festive Google Fonts: Cinzel, Great Vibes, Poppins, Anek Tamil & Arima Madurai -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Great+Vibes&family=Mukta+Malar:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@500;600;700&family=Arima+Madurai:wght@500;700&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
@@ -1169,20 +1170,37 @@
         <span class="diya-tap-hint">✨ Tap diya to stoke the light ✨</span>
       </section>
 
-      <!-- Festive Message Body -->
+      <!-- Festive Message Body (Sequential Alternating English & Tamil) -->
       <section id="message">
-        <div class="tamil-greeting-banner" style="background: rgba(255, 215, 0, 0.08); border: 1px solid rgba(255, 215, 0, 0.32); border-radius: 18px; padding: 12px 18px; margin: 0 auto 16px auto; max-width: 580px;">
-          <h3 style="font-family: 'Mukta Malar', sans-serif; font-size: 1.35rem; color: var(--gold-light); margin: 0 0 6px 0;">இனிய தீபாவளி நல்வாழ்த்துகள்! 🪔</h3>
-          <p style="font-family: 'Mukta Malar', sans-serif; font-size: 0.98rem; color: rgba(255, 255, 255, 0.92); margin: 0;">
-            தீப ஒளியில் உங்கள் இல்லமும் உள்ளமும் மகிழ்ச்சியால் நிறையட்டும்! ✨
-          </p>
+        <!-- Language Indicator / Mini Manual Toggle -->
+        <div class="lang-toggle-bar">
+          <button id="btn-en" class="lang-pill active" onclick="switchLang('en')">English</button>
+          <span class="lang-divider">|</span>
+          <button id="btn-ta" class="lang-pill" onclick="switchLang('ta')">தமிழ்</button>
         </div>
-        <p>
-          May the light of Diyas illuminate your path with joy, prosperity, and endless blessings.
-        </p>
-        <span class="highlight-wish" style="font-family: 'Great Vibes', cursive; font-size: 1.85rem; color: var(--gold-light);">
-          Wishing you and your family a dazzling Diwali! ✨
-        </span>
+
+        <!-- Crossfading Greeting Viewport (Zero Layout Shifts) -->
+        <div class="greeting-viewport">
+          <!-- English Slide -->
+          <div id="slide-en" class="greeting-slide active" aria-hidden="false">
+            <p class="greeting-lead">
+              May the light of Diyas illuminate your path with joy, prosperity, and endless blessings.
+            </p>
+            <p class="greeting-sub">
+              Wishing you and your family a dazzling Diwali! ✨
+            </p>
+          </div>
+
+          <!-- Tamil Slide -->
+          <div id="slide-ta" class="greeting-slide" aria-hidden="true">
+            <p class="greeting-lead tamil-font">
+              தீப ஒளியில் உங்கள் இல்லமும் உள்ளமும் இன்பத்தால் ஒளிரட்டும்.
+            </p>
+            <p class="greeting-sub tamil-font">
+              அனைவருக்கும் இனிய தீபாவளி நல்வாழ்த்துகள்! 🪔
+            </p>
+          </div>
+        </div>
       </section>
 
       <!-- ===================================================================
