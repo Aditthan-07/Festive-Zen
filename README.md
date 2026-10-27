@@ -6,10 +6,19 @@
 
 ## 📱 Live Previews
 
-| 💻 Desktop Experience | 📱 Mobile Responsiveness |
-| :---: | :---: |
-| <img src="./desktop-preview.png" alt="Festive-Zen Desktop View" width="540"/> | <img src="./mobile-preview.png" alt="Festive-Zen Mobile View" width="240"/> |
-| *Balanced framing with ambient festoon lighting* | *Optimized compact viewport with zero scroll* |
+### 💻 Desktop View
+<p align="center">
+  <img src="./desktop-preview.png" alt="Festive-Zen Desktop View" width="85%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);" />
+</p>
+<p align="center"><em>Balanced framing with ambient festoon lighting and central glassmorphism card</em></p>
+
+---
+
+### 📱 Mobile View
+<p align="center">
+  <img src="./mobile-preview.png" alt="Festive-Zen Mobile View" width="280px" style="border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);" />
+</p>
+<p align="center"><em>Compact vertical viewport with complete clearance and zero scrolling</em></p>
 
 ---
 
