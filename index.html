@@ -309,21 +309,21 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      /* Equal padding top and bottom accounting for header and footer overlays */
+      /* Balanced vertical spacing between top lights and footer credit */
       padding-top: 55px;
-      padding-bottom: 55px;
+      padding-bottom: 25px;
       padding-left: 16px;
       padding-right: 16px;
       box-sizing: border-box;
     }
 
-    /* Ensure the card itself does not have stray vertical margins or translation */
+    /* Greeting Card Container */
     .card, .greeting-card {
       position: relative;
       max-width: 680px;
       width: 100%;
-      margin: auto;
-      transform: translateY(-18px);
+      margin: 0 auto;
+      transform: none;
       background: var(--card-bg);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
@@ -1232,24 +1232,11 @@
       </div>
     </article>
 
+    <!-- Clean Centered Festive Footer Credit -->
+    <div class="footer-credit">
+      Crafted with ✨ by <a href="https://github.com/Aditthan-07" target="_blank" rel="noopener noreferrer">Aditthan</a>
+    </div>
   </main>
-
-  <!-- Interactive Floating Controls (Sound & Sparkler Burst) -->
-  <div class="floating-controls">
-    <button class="float-ctrl-btn" id="soundToggleBtn" onclick="toggleFestiveSound()" title="Toggle festive audio atmosphere">
-      <span id="soundIcon">🔔</span> <span id="soundLabel">Sound: Off</span>
-    </button>
-    <button class="float-ctrl-btn" onclick="triggerCelebrationBurst()" title="Launch celebratory fireworks burst">
-      <span>🎆</span> Launch Sparklers
-    </button>
-  </div>
-
-  <!-- Clean GitHub Attribution Badge on the Bottom-Right -->
-  <div class="footer-attribution" style="position: fixed; bottom: 20px; right: 24px; z-index: 20;">
-    <a href="https://github.com/Aditthan-07" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 9999px; background: rgba(18, 6, 30, 0.65); border: 1px solid rgba(245, 158, 11, 0.35); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color: #fef3c7; text-decoration: none; font-size: 0.8rem; letter-spacing: 0.4px;">
-      <span>Developed by <strong>Aditthan</strong></span>
-    </a>
-  </div>
 
   <!-- Toast Notification Feedback -->
   <div id="toastNotification">
