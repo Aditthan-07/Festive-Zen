@@ -1038,9 +1038,107 @@
         <span class="line"></span>
       </div>
 
-            <!-- Centered Baseline Diya Icon -->
-      <section class="diya-stage" aria-label="Traditional Earthen Deepam" style="margin: 20px 0; text-align: center;">
-        <div style="font-size: 3.5rem; filter: drop-shadow(0 0 16px rgba(255, 215, 0, 0.7));">🪔</div>
+      <!-- Central Animated Earthen Diya (Deepam) -->
+      <section class="diya-stage" id="diyaStage" title="Click or tap to stoke the flame!" aria-label="Glowing earthen Diya">
+        <div class="diya-ambient-glow"></div>
+        
+        <div class="diya-svg-wrap">
+          <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Traditional Earthen Diya">
+            <defs>
+              <linearGradient id="clayGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#e67e22"/>
+                <stop offset="40%" stop-color="#c0392b"/>
+                <stop offset="85%" stop-color="#78281f"/>
+                <stop offset="100%" stop-color="#49120b"/>
+              </linearGradient>
+
+              <linearGradient id="goldCarveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#f59e0b"/>
+                <stop offset="35%" stop-color="#fde047"/>
+                <stop offset="70%" stop-color="#d97706"/>
+                <stop offset="100%" stop-color="#fffbeb"/>
+              </linearGradient>
+
+              <radialGradient id="oilGradient" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#fff176"/>
+                <stop offset="60%" stop-color="#f57f17"/>
+                <stop offset="100%" stop-color="#bf360c"/>
+              </radialGradient>
+
+              <linearGradient id="flameOuterGrad" x1="50%" y1="100%" x2="50%" y2="0%">
+                <stop offset="0%" stop-color="rgba(255, 69, 0, 0.9)"/>
+                <stop offset="40%" stop-color="rgba(255, 140, 0, 0.8)"/>
+                <stop offset="80%" stop-color="rgba(255, 215, 0, 0.6)"/>
+                <stop offset="100%" stop-color="rgba(255, 255, 255, 0)"/>
+              </linearGradient>
+
+              <linearGradient id="flameMidGrad" x1="50%" y1="100%" x2="50%" y2="0%">
+                <stop offset="0%" stop-color="#e65100"/>
+                <stop offset="40%" stop-color="#ff9800"/>
+                <stop offset="85%" stop-color="#ffeb3b"/>
+                <stop offset="100%" stop-color="#ffffff"/>
+              </linearGradient>
+
+              <radialGradient id="flameCoreGrad" cx="50%" cy="65%" r="45%">
+                <stop offset="0%" stop-color="#ffffff"/>
+                <stop offset="60%" stop-color="#fff59d"/>
+                <stop offset="100%" stop-color="#ffee58"/>
+              </radialGradient>
+
+              <radialGradient id="basePlateGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgba(255, 215, 0, 0.4)"/>
+                <stop offset="70%" stop-color="rgba(255, 140, 0, 0.15)"/>
+                <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+              </radialGradient>
+            </defs>
+
+            <!-- Diya Base Reflection Plate -->
+            <ellipse cx="100" cy="138" rx="85" ry="12" fill="url(#basePlateGlow)"/>
+            
+            <!-- Brass & Terracotta Pedestal -->
+            <path d="M72,130 Q100,137 128,130 L124,136 Q100,142 76,136 Z" fill="url(#goldCarveGradient)"/>
+            <path d="M78,124 Q100,130 122,124 L126,131 Q100,138 74,131 Z" fill="url(#clayGradient)"/>
+
+            <!-- Main Terracotta Bowl Body -->
+            <path d="M25,98 Q45,132 100,132 Q155,132 175,98 Q140,118 100,118 Q60,118 25,98 Z" 
+                  fill="url(#clayGradient)" stroke="#5c150c" stroke-width="1.2"/>
+
+            <!-- Decorative Gold Relief Details -->
+            <path d="M50,105 Q70,122 100,122 Q130,122 150,105" 
+                  fill="none" stroke="url(#goldCarveGradient)" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="100" cy="122" r="2.5" fill="#ffd700"/>
+            <circle cx="85" cy="120" r="2" fill="#ffd700"/>
+            <circle cx="115" cy="120" r="2" fill="#ffd700"/>
+            <circle cx="70" cy="115" r="1.8" fill="#ffd700"/>
+            <circle cx="130" cy="115" r="1.8" fill="#ffd700"/>
+
+            <!-- Rim & Molten Oil Reservoir -->
+            <ellipse cx="100" cy="98" rx="75" ry="15" fill="url(#clayGradient)" stroke="#d97706" stroke-width="1"/>
+            <ellipse cx="100" cy="98" rx="66" ry="11" fill="url(#oilGradient)"/>
+
+            <!-- Filigree Rim Dots -->
+            <ellipse cx="100" cy="97" rx="70" ry="13" 
+                     fill="none" stroke="url(#goldCarveGradient)" stroke-width="1.8" 
+                     stroke-dasharray="3, 5" stroke-linecap="round"/>
+
+            <path d="M92,97 Q100,90 108,97 Q100,100 92,97 Z" fill="#78281f"/>
+
+            <!-- Cotton Wick -->
+            <path d="M100,98 Q101,84 99,75" stroke="#1c1917" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <path d="M99,77 Q100,74 101,72" stroke="#ea580c" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+
+            <!-- Multi-Layered Animated Flame -->
+            <g id="diyaFlameGroup">
+              <path class="flame-outer" d="M100,75 C82,65 72,40 100,8 C128,40 118,65 100,75 Z" fill="url(#flameOuterGrad)"/>
+              <path class="flame-middle" d="M100,75 C86,64 78,44 100,16 C122,44 114,64 100,75 Z" fill="url(#flameMidGrad)"/>
+              <path class="flame-inner" d="M100,75 C91,65 86,52 100,26 C114,52 109,65 100,75 Z" fill="#fff263"/>
+              <path class="flame-core" d="M100,74 C94,66 91,56 100,38 C109,56 106,66 100,74 Z" fill="url(#flameCoreGrad)"/>
+              <ellipse cx="100" cy="74" rx="4.5" ry="2" fill="#00b4d8" opacity="0.85"/>
+            </g>
+          </svg>
+        </div>
+        
+        <span class="diya-tap-hint">✨ Tap diya to stoke the light ✨</span>
       </section>
 
       <!-- Festive Message Body -->
