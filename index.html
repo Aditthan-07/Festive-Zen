@@ -309,26 +309,21 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      .page-wrapper, .main-container {
-      position: relative;
-      z-index: 10;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      /* Reduce top padding and increase bottom clearance to push card upward */
-      padding-top: clamp(20px, 4vh, 40px);
-      padding-bottom: clamp(60px, 8vh, 85px);
+      /* Equal padding top and bottom accounting for header and footer overlays */
+      padding-top: 55px;
+      padding-bottom: 55px;
       padding-left: 16px;
       padding-right: 16px;
       box-sizing: border-box;
     }
 
-    .greeting-card {
+    /* Ensure the card itself does not have stray vertical margins or translation */
+    .card, .greeting-card {
       position: relative;
       max-width: 680px;
       width: 100%;
+      margin: auto;
+      transform: translateY(-18px);
       background: var(--card-bg);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
