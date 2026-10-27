@@ -1,6 +1,10 @@
 # 🪔 Festive-Zen — Interactive Diwali Celebration Experience
 
-> An ambient, glassmorphic festive greeting experience featuring dynamic celebration visuals, interactive earthenware diya canvas, authentic bilingual typography, and one-click personalized link sharing.
+[![Live Demo](https://img.shields.io/badge/Demo-Live_Site-success?style=for-the-badge&logo=vercel)](https://festive-zen.vercel.app/)
+
+> **Live Production URL:** [https://festive-zen.vercel.app/](https://festive-zen.vercel.app/)
+
+An ambient, glassmorphic festive greeting experience featuring dynamic celebration visuals, interactive earthenware diya canvas, authentic bilingual typography, and one-click personalized link sharing.
 
 ---
 
