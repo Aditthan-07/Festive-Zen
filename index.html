@@ -1040,10 +1040,13 @@
         <span>✨</span> Shubh Deepavali <span>✨</span>
       </div>
 
-      <!-- Festive Greeting Header -->
-      <div class="greeting-header-wrapper" style="text-align: center; width: 100%;">
-        <h1 class="greeting-sender-name gold-shimmer" style="text-align: center; margin: 6px 0 0 0; font-size: clamp(1.8rem, 4.5vw, 2.6rem); font-weight: 800; letter-spacing: 2px;">
-          HAPPY DIWALI
+      <!-- Centered Two-Tier Greeting Header -->
+      <div class="greeting-header-wrapper" style="text-align: center; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <h2 class="greeting-subtitle" id="greetingSubtitle" style="text-align: center; margin: 0; font-size: clamp(1rem, 2.5vw, 1.35rem); letter-spacing: 2px;">
+          HAPPY DIWALI FROM
+        </h2>
+        <h1 class="greeting-sender-name gold-shimmer" id="greetingSenderName" style="text-align: center; margin: 6px 0 0 0; font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; letter-spacing: 1.5px; width: 100%;">
+          ADITTHAN
         </h1>
       </div>
 
@@ -1173,7 +1176,38 @@
         </span>
       </section>
 
+      <!-- ===================================================================
+           2. INTERACTION PANEL (ADD YOUR NAME, GENERATE LINK & ACTIONS)
+           =================================================================== -->
+      <div class="interaction-panel">
+        <!-- Initial Click-to-Add-Name Trigger -->
+        <button class="btn-initial-toggle" id="toggleNameBtn" onclick="toggleNameSection()">
+          <span>✨</span> Add Your Name
+        </button>
 
+        <!-- Smoothly Revealed Name Customization Panel -->
+        <div id="nameSection" style="display: none;">
+          <div class="input-wrapper">
+            <input type="text" id="nameInput" placeholder="Enter your name" maxlength="35" autocomplete="off" />
+          </div>
+
+          <!-- Three Distinct Action Buttons -->
+          <div class="action-button-group">
+            <button class="btn-action btn-set-name" id="btnSetName" onclick="setName()">
+              <span>✨</span> Set My Name
+            </button>
+            <button class="btn-action btn-generate-link" id="btnGenerateLink" onclick="generateShareLink()">
+              <span id="genLinkIcon">🔗</span> <span id="genLinkText">Generate Share Link</span>
+            </button>
+            <button class="btn-action btn-whatsapp" id="btnWhatsApp" onclick="shareWhatsApp()">
+              <span>📲</span> Share on WhatsApp
+            </button>
+          </div>
+
+          <!-- Generated Share Link Preview Box -->
+          <div id="linkBox" class="share-link-box" style="display: none;"></div>
+        </div>
+      </div>
     </article>
 
   </main>
