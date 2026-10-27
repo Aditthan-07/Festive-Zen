@@ -991,8 +991,17 @@
        ========================================================================== -->
   <div id="video-bg-container">
     <!-- Reference repo celebration video -->
-    <!-- Static High-Resolution Artwork Backdrop -->
-    <div style="position: absolute; inset: 0; background: url('./diwali.jpg') center center/cover no-repeat; filter: brightness(0.68) contrast(1.08);"></div>
+    <video
+      id="bgVideo"
+      autoplay
+      loop
+      muted
+      playsinline
+      poster="./diwali-poster.jpg"
+    >
+      <source src="./new-diwali-bg.mp4" type="video/mp4" />
+      <source src="./diwali-compressed.mp4" type="video/mp4" />
+    </video>
 
     <!-- Warm Scrim Overlay (Crucial: prevents bright video frames from washing out golden text) -->
     <div class="vignette-overlay" style="backdrop-filter: blur(1px);"></div>
